@@ -13,7 +13,7 @@ typedef unsigned int u_int;
 typedef u_char	cisdata_t;
 #include "cistpl.h"
 
-static const char *dtypes[] = {
+static const char *dtypes[16] = {
 	[CISTPL_DTYPE_NULL] = "NULL",
 	[CISTPL_DTYPE_ROM] = "ROM",
 	[CISTPL_DTYPE_OTPROM] = "OTPROM",
@@ -26,7 +26,7 @@ static const char *dtypes[] = {
 	[CISTPL_DTYPE_EXTEND] = "EXTEND",
 };
 
-static const char *funcs[] = {
+static const char *funcs[256] = {
 	[CISTPL_FUNCID_MULTI] = "MULTI",
 	[CISTPL_FUNCID_MEMORY] = "MEMORY",
 	[CISTPL_FUNCID_SERIAL] = "SERIAL",
@@ -120,7 +120,7 @@ static const char *interfaces[16] = {
 	[7] = "custom interface 3",
 };
 
-static const char *pds[] = {
+static const char *pds[8] = {
 	"NomV",
 	"MinV",
 	"MaxV",
@@ -128,14 +128,15 @@ static const char *pds[] = {
 	"AvgI",
 	"PeakI",
 	"PDwnI",
+	"???",
 };
 
-static const int mantis[] = {
+static const int mantis[16] = {
 	10, 12, 13, 15, 20, 25, 30, 35,
 	40, 45, 50, 55, 60, 70, 80, 90,
 };
 
-static const int exponent[] = {
+static const int exponent[8] = {
 	1, 10, 100, 1000, 10000, 100000, 1000000, 10000000,
 };
 
